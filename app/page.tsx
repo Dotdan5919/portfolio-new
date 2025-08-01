@@ -139,7 +139,7 @@ name: "Github",
 <div className="flex flex-row gap-4  w-full">
 
 <ul className="w-[40%] grid grid-cols-2 bg-zinc-900 text-white text-2xl gap-x-4 gap-y-8 rounded-md p-10">
-{Stack.map((item, idx) => ( 
+{Stack.map((item) => ( 
 
 <li key={item.name} className="flex items-center gap-2">
   {renderIcon(item.name)}
