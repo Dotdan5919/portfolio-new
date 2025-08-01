@@ -1,103 +1,193 @@
+import { SpotlightNewDemo, SpotlightPreview } from "@/components/Hero";
+import { NavbarDemo } from "@/components/Navbar";
+import { Navbar } from "@/components/ui/resizable-navbar";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import { InfiniteMovingCards} from "@/components/ui/infinite-moving-cards";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import { MyText } from "@/components/MyText";
+import { faGithub, faPhp,faJs,faReact,faLaravel, faWordpress, faHtml5, faCss3Alt, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faAd } from "@fortawesome/free-solid-svg-icons";
+import Tailwindcss from "@/components/ui/logos/tailwind";
+import Typescript from "@/components/ui/logos/typescript";
+import Nextjs from "@/components/ui/logos/nextjs";
+import Firebase from "@/components/ui/logos/firebase";
+import Mysql from "@/components/ui/logos/mysql";
+import Expressjs from "@/components/ui/logos/express";
+import Mongodb from "@/components/ui/logos/mongodb";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FloatingDockDemo, MyfloatingDock } from "@/components/Myfloatingdocs";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+
+export default function Home() {
+
+  const Stack = [
+
+  {
+name: "Github",
+
+  },
+  {
+    name: "Javascript",
+  },
+  {
+    name: "Next.js",
+  },
+  {
+    name: "Firebase",
+  },
+  {
+    name: "Laravel",
+  },
+  {
+    name: "MySQL",
+  },
+  {
+    name: "WordPress",
+  },
+  {
+    name: "TypeScript",
+  },
+  {
+    name: "Node.js",
+  },
+  {
+    name: "React",
+  },
+  {
+    name: "Tailwind",
+  },
+ 
+  {
+    name: "PHP",
+  },
+  {
+    name:"express"
+  }
+ 
+  
+
+];
+  const renderIcon = (itemName: string) => {
+      switch (itemName) {
+        case "Tailwind":
+          return <Tailwindcss />;
+        case "TypeScript":
+          return <Typescript />;
+        case "Next.js":
+          return <Nextjs />;
+        case "Firebase":
+          return <Firebase />;
+        case "MySQL":
+          return <Mysql />;
+  
+          case "express":
+              return <Expressjs/>;
+
+              case "MongoDB":
+                return <Mongodb/>;
+
+                case "Github":
+                  return <FontAwesomeIcon icon={faGithub} className="text-zinc-500" />;
+        case "PHP":
+          return <FontAwesomeIcon icon={faPhp} className="text-zinc-500" />;
+        case "Laravel":
+          return <FontAwesomeIcon icon={faLaravel} className="text-zinc-500" />;
+        case "HTML":
+          return <FontAwesomeIcon icon={faHtml5} className="text-zinc-500" />;
+        case "Css":
+          return <FontAwesomeIcon icon={faCss3Alt} className="text-zinc-500" />;
+        case "Javascript":
+          return <FontAwesomeIcon icon={faJs} className="text-zinc-500" />;
+        case "WordPress":
+          return <FontAwesomeIcon icon={faWordpress} className="text-zinc-500" />;
+        case "Node.js":
+          return <FontAwesomeIcon icon={faNodeJs} className="text-zinc-500" />;
+        case "React":
+          return <FontAwesomeIcon icon={faReact} className="text-zinc-500" />;
+              
+        default:
+          return (
+            <FontAwesomeIcon
+              icon={faAd}
+              className="text-zinc-500"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          );
+      }
+    };
+  return (
+   
+
+   <div className="flex min-h-screen gap-0 flex-col">
+
+
+    
+    
+<NavbarDemo/>     
+<SpotlightPreview/>
+<Projects/>
+
+<div className=" px-36 flex flex-col items-start justify-start bg-black w-full">
+
+<div className="flex-w-full ">
+<MyText/>
+</div>
+
+
+<div className="flex flex-row gap-4  w-full">
+
+<ul className="w-[40%] grid grid-cols-2 bg-zinc-900 text-white text-2xl gap-x-4 gap-y-8 rounded-md p-10">
+{Stack.map((item, idx) => ( 
+
+<li key={item.name} className="flex items-center gap-2">
+  {renderIcon(item.name)}
+<p >{item.name}</p>
+</li>
+))}
+
+
+</ul>
+
+<div className="w-[60%] bg-zinc-900 rounded-md  p-10 text-white leading-8">
+
+
+
+My journey began with simple curiosity and a <span className="font-bold">design background</span> that taught me visual storytelling. I started exploring <span className="font-bold">HTML, CSS, JavaScript, and PHP</span>, then naturally evolved my toolkit to include <span className="font-bold">Laravel, React, Express.js, and Node.js</span> for full-stack development.
+
+<div className="mt-4"> </div>
+
+<span className="font-bold">"What drives me isn't just writing code—it's translating someone's vision into a digital reality they can see, touch, and experience."</span>
+
+
+<div className="mt-4"> </div>
+
+My design roots run deep through everything I build. I still create <span className="font-bold">graphics</span> and edit <span className="font-bold">videos</span>, and these creative skills transform my development work. Every project starts with understanding the vision, and I'm always asking: "What story are we telling, and how can technology serve that narrative?" <span className="font-bold">"The best code doesn't just function—it breathes life into ideas and makes the impossible feel inevitable." ✨</span>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<div className="flex flex-col px-24  bg-black w-full justify-center items-center py-10">
+
+
+<h1 className="text-white font-black text-3xl">Get in touch</h1>
+
+<FloatingDockDemo/>
+</div>
+  
+
+
+
+
     </div>
   );
 }
+
+
+
