@@ -2,7 +2,10 @@ import React from 'react'
 import { ThreeDCardDemo } from '@/components/Card'
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
-import image_light from '@/components/images/4.jpg';
+import image_light from '@/images/4.png';
+import image_movie from '@/images/1.jpg';
+import image_crypto from '@/images/2.png';
+
 
 export default function Projects() {
 const projects = [
@@ -14,6 +17,23 @@ const projects = [
     github: "#",
     live: "#",
   },
+  {
+    title: "Moplay movie-app",
+    description: "This is a Movie app developed with React using various react concepts,also various API's like:Email.js,movie Collection API and firebase auth was used to develop this website,The states were managed using contextual API",
+    image: image_movie,
+    stack: [ "Tailwind" ,"React" ,"API", "Git" , "Github", "Firebase","API","Framer-motion"  ],
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "Cynphoni landing page",
+    description: "Cynphoni Landing Page: A single-page application serving as a landing page, built with React for dynamic content and Tailwind CSS for rapid, responsive styling. The project emphasizes modern web development practices, including Git and GitHub for source code management and collaboration.",
+    image: image_crypto,
+    stack: [ "Tailwind" ,"React" ,"API", "Git" , "Github" ],
+    github: "#",
+    live: "#",
+  },
+
 
 ]
 

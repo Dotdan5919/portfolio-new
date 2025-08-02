@@ -4,6 +4,9 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Image, { StaticImageData } from "next/image";
 import image_1 from "@/images/1.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 
 
@@ -11,8 +14,10 @@ interface CardProps {  img: StaticImageData;
   name: string;
   description: string;
   stack: string[];
+  github?: string;
+  live?: string;
 }
-export function ThreeDCardDemo({name,description,stack,img}: CardProps) {
+export function ThreeDCardDemo({name,description,stack,img,github,live}: CardProps) {
   return (
     <CardContainer className="inter-var scale-90">
       <CardBody className="bg-black shadow-emarald-500/[.1] border-2 border-white relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2]  w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -35,15 +40,31 @@ export function ThreeDCardDemo({name,description,stack,img}: CardProps) {
         <CardItem className="text-white">
 {description}
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="flex flex-col items-start  justify-between gap-10 mt-10">
+          <div className="flex gap-2">
+            {stack.map((item, index) => (
+              <span
+                key={index}
+                className="text-xs font-medium bg-zinc-800 text-white px-2 py-1 rounded-md items-center justify-center"
+              >
+                {item}
+              </span>
+            ))} </div>
           <CardItem
             translateZ={20}
             as="a"
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-4 py-2 text-white rounded-xl text-xs font-normal dark:text-white"
+            className="px-4 py-2 flex items-center  gap-3 text-white rounded-xl text-xs font-normal dark:text-white"
           >
-            Try now →
+            
+            <Link href={github?github:"#"} className="flex items-center">
+            <FontAwesomeIcon icon={faGithub} className="mr-2 scale-150" />
+            Github
+            </Link>
+
+            <Link href={live?live:"#"} className="flex items-center">
+            View Project →</Link>
           </CardItem>
          
         </div>
