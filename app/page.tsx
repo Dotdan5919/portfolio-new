@@ -19,6 +19,7 @@ import Expressjs from "@/components/ui/logos/express";
 import Mongodb from "@/components/ui/logos/mongodb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FloatingDockDemo, MyfloatingDock } from "@/components/Myfloatingdocs";
+import { TabsDemo } from "@/components/mytabs";
 
 
 export default function Home() {
@@ -122,12 +123,13 @@ name: "Github",
 
    <div className="flex min-h-screen gap-0 flex-col">
 
-,
     
     
 <NavbarDemo/>     
 <SpotlightPreview/>
 <Projects/>
+<TabsDemo/>
+
 
 <div className=" px-36 flex flex-col items-start justify-start bg-black w-full">
 
