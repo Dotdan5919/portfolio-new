@@ -128,7 +128,7 @@ name: "Github",
 <NavbarDemo/>     
 <SpotlightPreview/>
 <Projects/>
-<TabsDemo/>
+
 
 
 <div className=" px-36 flex flex-col items-start justify-start bg-black w-full">
