@@ -2,33 +2,38 @@
 
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image, { StaticImageData } from "next/image";
+import image_1 from "@/images/1.jpg";
 
-export function ThreeDCardDemo() {
+
+
+interface CardProps {  img: StaticImageData;
+  name: string;
+  description: string;
+  stack: string[];
+}
+export function ThreeDCardDemo({name,description,stack,img}: CardProps) {
   return (
     <CardContainer className="inter-var scale-90">
       <CardBody className="bg-black shadow-emarald-500/[.1] border-2 border-white relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2]  w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
        
         
         <CardItem translateZ="100" className="w-full mt-4">
-          <img
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
+      
+          <Image src={img} height="1000"
+            width="1000" alt="thumbnail" 
+            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" />
         </CardItem>
 
  <CardItem
         
           className="text-xl font-bold text-neutral-600 dark:text-white mb-2 mt-3"
         >
-            Title
+            {name}
          
         </CardItem>
         <CardItem className="text-white">
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias saepe magni quidem temporibus consequatur eveniet. Deserunt totam tempora, laborum atque iusto nisi praesentium omnis adipisci quidem, quod eius earum commodi!
-
+{description}
         </CardItem>
         <div className="flex justify-between items-center mt-20">
           <CardItem
