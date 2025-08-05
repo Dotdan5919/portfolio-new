@@ -18,12 +18,12 @@ export function FloatingDockDemo() {
 
   {title:"LinkedIn",
      icon:(<IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
-     href:"#" ,  
+     href:"https://www.linkedin.com/in/osakpolo-ighodaro-7281a6157/" ,  
   },
     {
         title: "mail",
         icon: (<IconBrandMailgun className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
-        href: "#",
+        href: "mailto:dighodaro95@gmail.com",
 
 
     },
@@ -40,13 +40,13 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/Dotdan5919",
     },
   ];
   return (
-    <div className="flex items-center justify-center h-28 w-full">
+    <div className="flex items-center justify-center h-28 w-full" id="contact">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
+       // only for demo, remove for production
         items={links}
       />
     </div>

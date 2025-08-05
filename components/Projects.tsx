@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { ThreeDCardDemo } from '@/components/Card'
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
@@ -9,12 +10,14 @@ import image_indesign from '@/images/3.jpg';
 
 
 
+
 export default function Projects() {
-const projects = [
+ 
+  const projects = [
     {
     title: "E-commerce Shop",
-    description: "Cynphoni Landing Page: A single-page application serving as a landing page, built with React for dynamic content and Tailwind CSS for rapid, responsive styling. The project emphasizes modern web development practices, including Git and GitHub for source code management and collaboration.",
-    image: image_indesign,
+    description: "A modern e-commerce web application built with Next.js 14 and TypeScript, featuring product catalog, cart functionality, and checkout process. Demonstrates advanced React patterns, server-side rendering, and responsive design for optimal performance across all devices. Deployed on Vercel with type-safe development and component-based architecture.",
+     image: image_indesign,
     stack: [ "Tailwind" ,"Next.js" ,"API", "Git" , "Github","Typescript","motion","express.js" ],
     github: "https://github.com/Dotdan5919/indesign",
     live: "https://indesign-doc71phq0-ighodaro-osakpolo-daniels-projects.vercel.app/",
@@ -43,47 +46,65 @@ const projects = [
     github: "https://github.com/Dotdan5919/crypto-landing",
     live: "https://www.cynphoni.ighodarodaniel.com.ng/",
   },
-
-
-
-]
+  ];
+  const moreProjects = [
+    {
+      title: "Laravel Blog",
+      description: "A blog platform built with Laravel, featuring authentication, CRUD, and RESTful APIs.",
+      image: "https://via.placeholder.com/400x250?text=Laravel+Blog",
+      stack: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "WordPress Portfolio",
+      description: "A custom WordPress theme for a personal portfolio, with custom post types and plugins.",
+      image: "https://via.placeholder.com/400x250?text=WordPress+Portfolio",
+      stack: ["WordPress", "PHP", "CSS", "JavaScript"],
+      github: "#",
+      live: "#",
+    },
+  ];
 
 
   return (
-    <div className='flex flex-col min-h-screen  items-center justify-between p-24 bg-black'>
+    <div className='flex flex-col min-h-screen  items-center justify-between sm:p-24 pt-20 bg-black' id="projects">
       
       <div className="flex h-">
 <TextHoverEffect text="Projects"  />
 </div>
 
-<div className="grid grid-cols-2">
+<div className="grid grid-cols-1 sm:grid-cols-2 w-full ">
   {
 projects.map((project, index) => (
-    <div key={index} className={`h-[550px]  m-10`}>
+    <div key={index} className={`w-full sm:mt-auto -mt-30 `}>
       <ThreeDCardDemo 
         img={project.image}
         name={project.title}
         description={project.description}
         stack={project.stack}
+        live={project.live}
+        github={project.github}
       />
     </div>
   ))}
-
-
-
-
-
-
-  
 </div>
-
-
-
-
-
-
-
 
     </div>
   )
 }
+
+// Add Tailwind animation class
+// In your global CSS (e.g., globals.css), add:
+// @layer utilities {
+//   .animate-popup {
+//     @apply transition-all duration-500 ease-out scale-90 opacity-0;
+//     animation: popup-fade-in 0.4s cubic-bezier(0.4,0,0.2,1) forwards;
+//   }
+//   @keyframes popup-fade-in {
+//     to {
+//       opacity: 1;
+//       scale: 1;
+//     }
+//   }
+// }

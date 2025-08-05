@@ -127,4 +127,9 @@
   }
 }
 
+
+/* for smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
   

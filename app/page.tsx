@@ -131,56 +131,32 @@ name: "Github",
 
 
 
-<div className=" px-36 flex flex-col items-start justify-start bg-black w-full">
-
-<div className="flex-w-full ">
-<MyText/>
+<div className="md:px-36 px-10 flex flex-col items-start justify-start bg-black w-full">
+  <div className="flex-w-full ">
+    <MyText/>
+  </div>
+  <div className="flex md:flex-row flex-col gap-4  w-full">
+    <ul className="md:w-[40%] w-full grid md:grid-cols-1 grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 bg-zinc-900 text-white text-2xl gap-x-4 gap-y-8 rounded-md p-10">
+      {Stack.map((item) => (
+        <li key={item.name} className="flex items-center gap-2">
+          {renderIcon(item.name)}
+          <p >{item.name}</p>
+        </li>
+      ))}
+    </ul>
+    <div className="md:w-[60%] w-full bg-zinc-900 rounded-md  p-10 text-white leading-8">
+      My journey began with simple curiosity and a <span className="font-bold">design background</span> that taught me visual storytelling. I started exploring <span className="font-bold">HTML, CSS, JavaScript, and PHP</span>, then naturally evolved my toolkit to include <span className="font-bold">Laravel, React, Express.js, and Node.js</span> for full-stack development.
+      <div className="mt-4"> </div>
+      <span className="font-bold">"What drives me isn't just writing code—it's translating someone's vision into a digital reality they can see, touch, and experience."</span>
+      <div className="mt-4"> </div>
+      My design roots run deep through everything I build. I still create <span className="font-bold">graphics</span> and edit <span className="font-bold">videos</span>, and these creative skills transform my development work. Every project starts with understanding the vision, and I'm always asking: "What story are we telling, and how can technology serve that narrative?" <span className="font-bold">"The best code doesn't just function—it breathes life into ideas and makes the impossible feel inevitable." ✨</span>
+    </div>
+  </div>
 </div>
 
-
-<div className="flex flex-row gap-4  w-full">
-
-<ul className="w-[40%] grid grid-cols-2 bg-zinc-900 text-white text-2xl gap-x-4 gap-y-8 rounded-md p-10">
-{Stack.map((item) => ( 
-
-<li key={item.name} className="flex items-center gap-2">
-  {renderIcon(item.name)}
-<p >{item.name}</p>
-</li>
-))}
-
-
-</ul>
-
-<div className="w-[60%] bg-zinc-900 rounded-md  p-10 text-white leading-8">
-
-
-
-My journey began with simple curiosity and a <span className="font-bold">design background</span> that taught me visual storytelling. I started exploring <span className="font-bold">HTML, CSS, JavaScript, and PHP</span>, then naturally evolved my toolkit to include <span className="font-bold">Laravel, React, Express.js, and Node.js</span> for full-stack development.
-
-<div className="mt-4"> </div>
-
-<span className="font-bold">"What drives me isn't just writing code—it's translating someone's vision into a digital reality they can see, touch, and experience."</span>
-
-
-<div className="mt-4"> </div>
-
-My design roots run deep through everything I build. I still create <span className="font-bold">graphics</span> and edit <span className="font-bold">videos</span>, and these creative skills transform my development work. Every project starts with understanding the vision, and I'm always asking: "What story are we telling, and how can technology serve that narrative?" <span className="font-bold">"The best code doesn't just function—it breathes life into ideas and makes the impossible feel inevitable." ✨</span>
-</div>
-
-
-
-</div>
-</div>
-
-
-
-<div className="flex flex-col px-24  bg-black w-full justify-center items-center py-10">
-
-
-<h1 className="text-white font-black text-3xl">Get in touch</h1>
-
-<FloatingDockDemo/>
+<div className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-24 bg-black w-full justify-center items-center py-10">
+  <h1 className="text-white font-black text-2xl sm:text-3xl mb-4">Get in touch</h1>
+  <FloatingDockDemo/>
 </div>
   
 
