@@ -2,14 +2,11 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floatingdocs";
 import {
   IconBrandGithub,
-  IconBrandGmail,
+
   IconBrandLinkedin,
   IconBrandMailgun,
   IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
+ 
 } from "@tabler/icons-react";
 
 export function FloatingDockDemo() {

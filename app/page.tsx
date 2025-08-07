@@ -1,12 +1,8 @@
-import { SpotlightNewDemo, SpotlightPreview } from "@/components/Hero";
+import { SpotlightPreview } from "@/components/Hero";
 import { NavbarDemo } from "@/components/Navbar";
-import { Navbar } from "@/components/ui/resizable-navbar";
-import Image from "next/image";
 
-import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import { InfiniteMovingCards} from "@/components/ui/infinite-moving-cards";
-import { PointerHighlight } from "@/components/ui/pointer-highlight";
+
 import { MyText } from "@/components/MyText";
 import { faGithub, faPhp,faJs,faReact,faLaravel, faWordpress, faHtml5, faCss3Alt, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faAd } from "@fortawesome/free-solid-svg-icons";
@@ -18,8 +14,8 @@ import Mysql from "@/components/ui/logos/mysql";
 import Expressjs from "@/components/ui/logos/express";
 import Mongodb from "@/components/ui/logos/mongodb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FloatingDockDemo, MyfloatingDock } from "@/components/Myfloatingdocs";
-import { TabsDemo } from "@/components/mytabs";
+import { FloatingDockDemo } from "@/components/Myfloatingdocs";
+
 
 
 export default function Home() {
