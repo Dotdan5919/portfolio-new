@@ -1,11 +1,6 @@
 "use client";
-interface MobileNavMenuProps {
-  children: ReactNode;
-  className?: string;
-  isOpen: boolean;
-}
+
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
   motion,
@@ -13,11 +8,10 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-
 import React, { useRef, useState } from "react";
 import type { ReactNode } from "react";
 
-
+// Type definitions
 interface NavbarProps {
   children: ReactNode;
   className?: string;
@@ -49,8 +43,13 @@ interface MobileNavHeaderProps {
   className?: string;
 }
 
-// Removed duplicate MobileNavMenuProps block
+interface MobileNavMenuProps {
+  children: ReactNode;
+  className?: string;
+  isOpen: boolean;
+}
 
+// Main Navbar component
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
@@ -83,9 +82,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       )}
     </motion.div>
   );
-}
-// End of file
+};
 
+// Desktop navbar body
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
     <motion.div
@@ -114,8 +113,9 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       {children}
     </motion.div>
   );
-// End of file
+};
 
+// Navigation items with hover effects
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
@@ -148,6 +148,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   );
 };
 
+// Mobile navigation container
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
@@ -178,6 +179,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   );
 };
 
+// Mobile navigation header
 export const MobileNavHeader = ({
   children,
   className,
@@ -194,6 +196,7 @@ export const MobileNavHeader = ({
   );
 };
 
+// Mobile navigation menu with animation
 export const MobileNavMenu = ({
   children,
   className,
@@ -218,6 +221,7 @@ export const MobileNavMenu = ({
   );
 };
 
+// Mobile navigation toggle button
 export const MobileNavToggle = ({
   isOpen,
   onClick,
@@ -232,6 +236,7 @@ export const MobileNavToggle = ({
   );
 };
 
+// Styled navbar button component
 export const NavbarButton = ({
   href,
   as: Tag = "a",
@@ -270,5 +275,4 @@ export const NavbarButton = ({
       {children}
     </Tag>
   );
-}
-
+};

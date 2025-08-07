@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faPhp,faJs,faReact,faLaravel, faWordpress, faHtml5, faCss3Alt, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faAd } from "@fortawesome/free-solid-svg-icons";
 import Tailwindcss from "./logos/tailwind";
@@ -64,7 +65,7 @@ export const InfiniteMovingCards = (props: {
     addAnimation();
   }, [direction, speed]);
   // Icon map for FontAwesome icons
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, IconDefinition> = {
     Github: faGithub,
     PHP: faPhp,
     Laravel: faLaravel,
