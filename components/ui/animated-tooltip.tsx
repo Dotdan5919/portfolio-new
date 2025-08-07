@@ -36,20 +36,20 @@ export const AnimatedTooltip = ({
     springConfig,
   );
 
-  const handleMouseMove = (event: any) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
 
     animationFrameRef.current = requestAnimationFrame(() => {
-      const halfWidth = event.target.offsetWidth / 2;
+      const halfWidth = (event.target as HTMLImageElement).offsetWidth / 2;
       x.set(event.nativeEvent.offsetX - halfWidth);
     });
   };
 
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <div
           className="group relative mr-4 "
           key={item.name}
@@ -91,7 +91,7 @@ export const AnimatedTooltip = ({
 <Link href={item.link} target="_blank" rel="noopener noreferrer" >
 
 
-          <img  onMouseMove={handleMouseMove} src={item.image} alt={item.name} width={40} height={40} className="relative !m-0 h-10 w-10 rounded-full bg-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+          <Image  onMouseMove={handleMouseMove} src={item.image} alt={item.name} width={40} height={40} className="relative !m-0 h-10 w-10 rounded-full bg-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
       </Link>   
         </div>
       ))}

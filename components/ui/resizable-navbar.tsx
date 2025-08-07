@@ -1,5 +1,11 @@
 "use client";
+interface MobileNavMenuProps {
+  children: ReactNode;
+  className?: string;
+  isOpen: boolean;
+}
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
   motion,
@@ -9,15 +15,16 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import type { ReactNode } from "react";
 
 
 interface NavbarProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
 interface NavBodyProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   visible?: boolean;
 }
@@ -32,22 +39,17 @@ interface NavItemsProps {
 }
 
 interface MobileNavProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   visible?: boolean;
 }
 
 interface MobileNavHeaderProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-interface MobileNavMenuProps {
-  children: React.ReactNode;
-  className?: string;
-  isOpen: boolean;
-  onClose: () => void;
-}
+// Removed duplicate MobileNavMenuProps block
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,7 +83,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       )}
     </motion.div>
   );
-};
+}
+// End of file
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
@@ -111,7 +114,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       {children}
     </motion.div>
   );
-};
+// End of file
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -195,7 +198,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -230,23 +232,6 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
-  return (
-    <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
-        width={30}
-        height={30}
-      />
-      <span className="font-medium text-black dark:text-white">Startup</span>
-    </a>
-  );
-};
-
 export const NavbarButton = ({
   href,
   as: Tag = "a",
@@ -257,7 +242,7 @@ export const NavbarButton = ({
 }: {
   href?: string;
   as?: React.ElementType;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
@@ -285,4 +270,5 @@ export const NavbarButton = ({
       {children}
     </Tag>
   );
-};
+}
+

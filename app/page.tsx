@@ -143,9 +143,9 @@ name: "Github",
     <div className="md:w-[60%] w-full bg-zinc-900 rounded-md  p-10 text-white leading-8">
       My journey began with simple curiosity and a <span className="font-bold">design background</span> that taught me visual storytelling. I started exploring <span className="font-bold">HTML, CSS, JavaScript, and PHP</span>, then naturally evolved my toolkit to include <span className="font-bold">Laravel, React, Express.js, and Node.js</span> for full-stack development.
       <div className="mt-4"> </div>
-      <span className="font-bold">"What drives me isn't just writing code—it's translating someone's vision into a digital reality they can see, touch, and experience."</span>
+      <span className="font-bold">&quot;What drives me isn&#39;t just writing code—it&#39;s translating someone&#39;s vision into a digital reality they can see, touch, and experience.&quot;</span>
       <div className="mt-4"> </div>
-      My design roots run deep through everything I build. I still create <span className="font-bold">graphics</span> and edit <span className="font-bold">videos</span>, and these creative skills transform my development work. Every project starts with understanding the vision, and I'm always asking: "What story are we telling, and how can technology serve that narrative?" <span className="font-bold">"The best code doesn't just function—it breathes life into ideas and makes the impossible feel inevitable." ✨</span>
+      My design roots run deep through everything I build. I still create <span className="font-bold">graphics</span> and edit <span className="font-bold">videos</span>, and these creative skills transform my development work. Every project starts with understanding the vision, and I&#39;m always asking: &quot;What story are we telling, and how can technology serve that narrative?&quot; <span className="font-bold">&quot;The best code doesn&#39;t just function—it breathes life into ideas and makes the impossible feel inevitable.&quot; ✨</span>
     </div>
   </div>
 </div>

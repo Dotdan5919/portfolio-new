@@ -47,24 +47,7 @@ export default function Projects() {
     live: "https://www.cynphoni.ighodarodaniel.com.ng/",
   },
   ];
-  const moreProjects = [
-    {
-      title: "Laravel Blog",
-      description: "A blog platform built with Laravel, featuring authentication, CRUD, and RESTful APIs.",
-      image: "https://via.placeholder.com/400x250?text=Laravel+Blog",
-      stack: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "WordPress Portfolio",
-      description: "A custom WordPress theme for a personal portfolio, with custom post types and plugins.",
-      image: "https://via.placeholder.com/400x250?text=WordPress+Portfolio",
-      stack: ["WordPress", "PHP", "CSS", "JavaScript"],
-      github: "#",
-      live: "#",
-    },
-  ];
+
 
 
   return (

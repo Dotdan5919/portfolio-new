@@ -24,7 +24,7 @@ export function SpotlightPreview() {
        Ighodaro osakpolo <br/> Daniel
         </h1>
         <p className=" flex mx-auto mb-10 mt-4 max-w-lg text-center text-base font-normal text-neutral-300">
-       I'm a Full-Stack Developer who transforms creative visions into scalable, aesthetically stunning applications using TypeScript, Next.js, Laravel, Node.js,Firebase, MySQL, and WordPress—delivering exceptional user experiences that perform flawlessly under pressure.
+       I am a Full-Stack Developer who transforms creative visions into scalable, aesthetically stunning applications using TypeScript, Next.js, Laravel, Node.js,Firebase, MySQL, and WordPress—delivering exceptional user experiences that perform flawlessly under pressure.
         </p>
          <InfiniteMovingCards
         items={testimonials}

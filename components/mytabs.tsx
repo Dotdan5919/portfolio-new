@@ -1,6 +1,7 @@
 "use client";
 
 import { Tabs } from "@/components/ui/tabs";
+import Image from "next/image";
 
 export function TabsDemo() {
   const tabs = [
@@ -65,7 +66,9 @@ export function TabsDemo() {
 
 const DummyContent = () => {
   return (
-    <img
+
+    
+    <Image
       src="/linear.webp"
       alt="dummy image"
       width="1000"
