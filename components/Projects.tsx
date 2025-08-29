@@ -20,7 +20,7 @@ export default function Projects() {
      image: image_indesign,
     stack: [ "Tailwind" ,"Next.js" ,"API", "Git" , "Github","Typescript","motion","express.js" ],
     github: "https://github.com/Dotdan5919/indesign",
-    live: "https://indesign-doc71phq0-ighodaro-osakpolo-daniels-projects.vercel.app/",
+    live: "https://indesign-roan.vercel.app/",
   },
   {
     title: "Light House Website",
