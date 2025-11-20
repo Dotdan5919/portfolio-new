@@ -28,7 +28,7 @@ export default function Projects() {
     image: image_light,
     stack: [ "Tailwind" ,"React" ,"API", "Git" , "Github"  ],
     github: "https://github.com/Dotdan5919/Lighthouse",
-    live: "https://www.lighthouse.ighodarodaniel.com.ng/",
+    live: "https://lighthouse-rosy.vercel.app/",
   },
   {
     title: "Moplay movie-app",
@@ -36,7 +36,7 @@ export default function Projects() {
     image: image_movie,
     stack: [ "Tailwind" ,"React" ,"API", "Git" , "Github", "Firebase","API","motion"  ],
     github: "https://github.com/Dotdan5919/Movie-App",
-    live: "https://moplay.ighodarodaniel.com.ng/",
+    live: "https://movie-app-sigma-eight-14.vercel.app/",
   },
   {
     title: "Cynphoni landing page",
@@ -44,7 +44,7 @@ export default function Projects() {
     image: image_crypto,
     stack: [ "Tailwind" ,"React" , "Git" , "Github" ],
     github: "https://github.com/Dotdan5919/crypto-landing",
-    live: "https://www.cynphoni.ighodarodaniel.com.ng/",
+    live: "https://crypto-landing-smoky.vercel.app/",
   },
   ];
 
